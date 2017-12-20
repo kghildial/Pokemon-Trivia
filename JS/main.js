@@ -72,9 +72,12 @@ function task1(jsonObj) {
       }
       else if(key === 'prev_evolution') {
         // console.log('prev_evol found for' + pokemons[i]['name']);
-        var evol = document.createElement('div');
-          evol.textContent = pokemons[i][key][j].name + ': ' + pokemons[i][key][j].num;
-          td.appendChild(evol);
+        for(j = 0; j < pokemons[i][key].length; j++) {
+          // console.log(pokemons[i][key][j]);
+          var evol = document.createElement('div');
+            evol.textContent = pokemons[i][key][j].name + ': ' + pokemons[i][key][j].num;
+            td.appendChild(evol);
+        }
       }
       else {
         td.textContent = pokemons[i][key];
