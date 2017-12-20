@@ -64,21 +64,12 @@ function task1(jsonObj) {
         img.setAttribute('src', pokemons[i][key]); //Set 'img' URL as the 'key' value
         td.appendChild(img); //Append 'img' to 'td'
       }
-      else if(key === 'next_evolution') {  //If 'key' is 'next_evolution' array
+      else if(key === 'next_evolution' || key === 'prev_evolution') {  //If 'key' is 'next_evolution' array
 
         for(j = 0; j < pokemons[i][key].length; j++) { //Loop through the array
           var evol = document.createElement('div'); //Create a 'div' for each evolution
             evol.textContent = pokemons[i][key][j].name + ': ' + pokemons[i][key][j].num; //Assign data to each 'div'
             td.appendChild(evol); //Append the 'div' to the 'td'
-        }
-      }
-      else if(key === 'prev_evolution') {
-        // console.log('prev_evol found for' + pokemons[i]['name']);
-        for(j = 0; j < pokemons[i][key].length; j++) {
-          // console.log(pokemons[i][key][j]);
-          var evol = document.createElement('div');
-            evol.textContent = pokemons[i][key][j].name + ': ' + pokemons[i][key][j].num;
-            td.appendChild(evol);
         }
       }
       else {
