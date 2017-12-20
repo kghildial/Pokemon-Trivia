@@ -21,7 +21,7 @@ request.send();
 request.onload = function() {
   var obj = request.response;
   task1(obj);
-  // task2(pokemons);
+  task2(obj);
   // task3(pokemons);
 }
 
@@ -79,4 +79,11 @@ function task1(jsonObj) {
     } // Data filled in all 'tr'
     section.appendChild(tr); //Add the table to the section area of the page
   }
+}
+
+//Task two function
+function task2() {
+    //Grouping Based on Evolutions
+    //Pokemon name : Base Name (height, weight, spawn_time) --> Evolution 1 (height, weight, spawn_time) --> Evolution 2 (height, weight, spawn_time)
+
 }
