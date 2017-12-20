@@ -49,7 +49,7 @@ function task1(jsonObj) {
   p = pokemons[1];
   for(var key in p) {
     var th = document.createElement('th');
-    th.textContent = key;
+    th.innerHTML = key;
     tr_head.appendChild(th);
   }
   section.appendChild(tr_head);
@@ -69,12 +69,12 @@ function task1(jsonObj) {
 
         for(j = 0; j < pokemons[i][key].length; j++) { //Loop through the array
           var evol = document.createElement('div'); //Create a 'div' for each evolution
-            evol.textContent = pokemons[i][key][j].name + ': ' + pokemons[i][key][j].num; //Assign data to each 'div'
+            evol.innerHTML = pokemons[i][key][j].name + ': ' + pokemons[i][key][j].num; //Assign data to each 'div'
             td.appendChild(evol); //Append the 'div' to the 'td'
         }
       }
       else {
-        td.textContent = pokemons[i][key]; // Default case for adding data to the 'td'
+        td.innerHTML = pokemons[i][key]; // Default case for adding data to the 'td'
       }
       tr.appendChild(td); //Append all 'td' to the 'tr'
     } // Data filled in all 'tr'
@@ -100,11 +100,37 @@ function task2(jsonObj) {
 
   var uniqueList = Array.from(new Set(list));
 
+  var count = 0;
+  var div = document.createElement('div');
   for(i = 0; i < pokemons.length; i++) {
     for(var j = 0; j < uniqueList.length; j++) {
+      var inner_div = document.createElement('div')
+      inner_div.setAttribute('class', 'inner-div');
+      var h3 = document.createElement('h3');
+      var p = document.createElement('p');
       if(pokemons[i].num == uniqueList[j]) {
-        console.log(pokemons[i].name + ' (' + pokemons[i].height + ', ' + pokemons[i].weight + ', ' + pokemons[i].spawn_time + ')');
+        var index = pokemons[i];
+        h3.innerHTML = index.name + ':';
+        p.innerHTML = index.name + ' (' + index.height + ', ' + index.weight + ', ' + index.spawn_time + ')';
+        if(index.next_evolution) {
+          var evol = [];
+          for(var k = 0; k < index.next_evolution.length; k++) {
+            for(var l = 0; l < pokemons.length; l++) {
+              // console.log(index.next_evolution[k].num);
+              if(pokemons[l].num == index.next_evolution[k].num) {
+                evol[k] = pokemons[l];
+                break;
+              }
+            }
+            console.log(evol[k]);
+            p.innerHTML += '-->' + evol[k].name + '(' + evol[k].height + ', ' + evol[k].weight + ', ' + evol[k].spawn_time + ')';
+          }
+        }
+        inner_div.appendChild(h3);
+        inner_div.appendChild(p);
+        div.appendChild(inner_div);
       }
+      section.appendChild(div);
     }
   }
 }
