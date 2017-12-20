@@ -82,8 +82,28 @@ function task1(jsonObj) {
 }
 
 //Task two function
-function task2() {
-    //Grouping Based on Evolutions
-    //Pokemon name : Base Name (height, weight, spawn_time) --> Evolution 1 (height, weight, spawn_time) --> Evolution 2 (height, weight, spawn_time)
+function task2(jsonObj) {
+  //Grouping Based on Evolutions
+  //Pokemon name : Base Name (height, weight, spawn_time) --> Evolution 1 (height, weight, spawn_time) --> Evolution 2 (height, weight, spawn_time)
+  var pokemons = jsonObj['pokemon'];
+  var list = [];
 
+  for(var i = 0; i < pokemons.length; i++) {
+    if(pokemons[i].prev_evolution) {
+      list.push(pokemons[i].prev_evolution[0].num);
+    }
+    else{
+      list.push(pokemons[i].num);
+    }
+  }
+
+  var uniqueList = Array.from(new Set(list));
+
+  for(i = 0; i < pokemons.length; i++) {
+    for(var j = 0; j < uniqueList.length; j++) {
+      if(pokemons[i].num == uniqueList[j]) {
+        console.log(pokemons[i].name + ' (' + pokemons[i].height + ', ' + pokemons[i].weight + ', ' + pokemons[i].spawn_time + ')');
+      }
+    }
+  }
 }
