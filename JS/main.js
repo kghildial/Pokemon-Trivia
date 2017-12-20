@@ -64,7 +64,7 @@ function task1(jsonObj) {
         img.setAttribute('src', pokemons[i][key]); //Set 'img' URL as the 'key' value
         td.appendChild(img); //Append 'img' to 'td'
       }
-      else if(key === 'next_evolution' || key === 'prev_evolution') {  //If 'key' is 'next_evolution' array
+      else if(key === 'next_evolution' || key === 'prev_evolution') {  //If 'key' is 'next_evolution'  or 'prev_evolution' array
 
         for(j = 0; j < pokemons[i][key].length; j++) { //Loop through the array
           var evol = document.createElement('div'); //Create a 'div' for each evolution
