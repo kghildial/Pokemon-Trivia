@@ -20,7 +20,8 @@ request.send();
 
 request.onload = function() {
   var obj = request.response;
-  task1(obj);
+  var sort_obj = request.response;
+  task1(sort_obj);
   task2(obj);
   // task3(pokemons);
 }
