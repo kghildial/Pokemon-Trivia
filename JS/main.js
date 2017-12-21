@@ -87,6 +87,24 @@ function task2(jsonObj) {
   //Grouping Based on Evolutions
   //Pokemon name : Base Name (height, weight, spawn_time) --> Evolution 1 (height, weight, spawn_time) --> Evolution 2 (height, weight, spawn_time)
   var pokemons = jsonObj['pokemon'];
+
+  //Loop through all pokemons
+    //name = pokemons[i].name (add to 'p')
+    //if pokemon has no 'prev_evolution'
+      //add current (name, height, weight, spawn_time) to 'p'
+      //Loop through 'next_evolution'
+        //if pokemons[i].num == next_evolution[i].num
+          //add (name, height, weight, spawn_time) of that evolution to 'p'
+    //Else
+      //Loop through 'prev_evolution'
+        //if pokemons[i].num == prev_evolution[i].num
+          //add (name, height, weight, spawn_time) of that evolution ot 'p'
+      //add current (name, height, weight, spawn_time) to 'p'
+      //if pokemon has 'next_evolution'
+        //Loop through 'next_evolution'
+          //if pokemons[i].num == next_evolution.num
+          //add (name, height, weight, spawn_time) of that evolution to 'p'
+
   var list = [];
 
   for(var i = 0; i < pokemons.length; i++) {
