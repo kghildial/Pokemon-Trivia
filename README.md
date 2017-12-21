@@ -6,7 +6,7 @@ This repo is a Frontend challange assignment for Newgen Payments.
 
 This repo is a frontend assignment that manages and manipulates in operations using a JSON dataset on Pokemons (https://raw.githubusercontent.com/Biuni/PokemonGOPokedex/master/pokedex.json).
 
-The code is written in Vanilla JS and uses the XHR (XMLHttpRequest) API.
+The code is written in **Vanilla JS** and uses the **XHR (XMLHttpRequest) API**.
 It's a very useful JavaScript object that allows us to make network requests to retrieve resources from a server via JavaScript (e.g. images, text, JSON, even HTML snippets).
 
 The XHR setup and data request is done as follows:
