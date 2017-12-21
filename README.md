@@ -38,14 +38,14 @@ It does the following tasks:
 ### Task 1:
 #### Find the Top 10 Pokemon with the highest *spawn chance* and display all their details in a table in descending order.
 
-The code can be found in the  ***task1.js***  file.
+The code can be found in the  ***task1.js***  file inside the 'Method' folder.
 
 
 ### Task 2:
 #### Group the Pokemon based on their evolution and print in the following format:
 *a) Pokemon 1: Base Pokemon Name (height, weight, spawn time) --> Evolution 1 Name (height, weight, spawn time) --> Evolution 2 Name (height, weight, spawn time) --> so on*
 
-The code can be found in ***task2.js*** file.
+The code can be found in ***task2.js*** file inside the 'Method' folder.
 
 **I have also included an extra piece of code in *"optional-task2-unique-cases.js"* file.
 *This code has not been implemented and is just a concept I got while working on the assignment.*
@@ -63,6 +63,6 @@ will appear once.
 ### Task 3:
 #### From the list obtained in Task 1, Find the top 3 weaknesses found in these Pokemon and mention the number of Pokemon that have this weakness.
 
-This code can be found in ***task3.js*** file.
+This code can be found in ***task3.js*** file inside the 'Method' folder.
 
 **I have also mentioned the names of the pokemon(having that weakness) after each weaknesses' count in the output.**
