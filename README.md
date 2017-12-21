@@ -61,3 +61,5 @@ will appear once.
 #### From the list obtained in Task 1, Find the top 3 weaknesses found in these Pokemon and mention the number of Pokemon that have this weakness.
 
 This code can be found in ***task3.js*** file.
+
+**I have also mentioned the names of the pokemon(having that weakness) after each weaknesses' count in the output.**
