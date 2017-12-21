@@ -42,7 +42,6 @@ The code can be found in the  ***task1.js***  file.
 #### Group the Pokemon based on their evolution and print in the following format:
 *a) Pokemon 1: Base Pokemon Name (height, weight, spawn time) --> Evolution 1 Name (height, weight, spawn time) --> Evolution 2 Name (height, weight, spawn time) --> so on*
 
-
 The code can be found in ***task2.js*** file.
 
 **I have also included an extra piece of code in *"optional-task2-unique-cases.js"* file.
@@ -55,6 +54,8 @@ So repeating chains like:
 Bulbasaur (0.71 m, 6.9 kg, 20:00) --> Ivysaur (0.99 m, 13.0 kg, 07:00) --> Venusaur (2.01 m, 100.0 kg, 11:30)
 
 will appear once.
+
+#### The code implemented is as per the assigned tasks & is in *"task2.js"*
 
 ### Task 3:
 #### From the list obtained in Task 1, Find the top 3 weaknesses found in these Pokemon and mention the number of Pokemon that have this weakness.
