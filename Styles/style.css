@@ -19,3 +19,7 @@ h3, p{
   display: inline-block;
   padding: 0 5px;
 }
+
+ol {
+  list-style: lower-alpha;
+}

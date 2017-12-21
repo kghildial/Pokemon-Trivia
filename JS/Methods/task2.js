@@ -6,9 +6,10 @@ function task2(jsonObj) {
   var pokemons = jsonObj['pokemon'];
 
   //Loop through all pokemons
+  var ol = document.createElement('ol');
   for(var i = 0; i < pokemons.length; i++) {
-    // create 'div' for each element
-    var div = document.createElement('div');
+    // create 'li' for each element
+    var li = document.createElement('li');
     //create 'h3' for each element
     var h3 = document.createElement('h3');
     // create 'p' for each element
@@ -70,8 +71,9 @@ function task2(jsonObj) {
         }
       }
     }
-    div.appendChild(h3);
-    div.appendChild(p);
-    section.appendChild(div);
+    li.appendChild(h3);
+    li.appendChild(p);
+    ol.appendChild(li);
+    section.appendChild(ol);
   }
 }
