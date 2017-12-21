@@ -2,6 +2,8 @@
 
 This repo is a Frontend challange assignment for Newgen Payments.
 
+#### To view the output, please open *index.html* in a browser.
+
 ## Features:
 
 This repo is a frontend assignment that manages and manipulates in operations using a JSON dataset on Pokemons (https://raw.githubusercontent.com/Biuni/PokemonGOPokedex/master/pokedex.json).
