@@ -38,7 +38,7 @@ function task3(jsonObj) {
   var div = document.createElement('div');
   var h2 = document.createElement('h2');
   var ul = document.createElement('ul');
-  h2.innerHTML = 'Top 3 weaknesses found in the list of Pokemons obtained in Task 1 are: ';
+  h2.innerHTML = 'Task 3: Top 3 weaknesses found in the list of Pokemons obtained in Task 1 are: ';
   div.appendChild(h2);
 
   for(i = 0; i < 3; i++) {

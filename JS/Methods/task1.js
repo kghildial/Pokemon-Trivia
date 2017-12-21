@@ -17,6 +17,10 @@ function task1(jsonObj) {
       break;
     }
   }
+
+  var h2 = document.createElement('h2');
+  h2.innerHTML = 'Task 1: Top 10 Pokemon with the highest *spawn chance* and all their details in a table in descending order: '
+  section.appendChild(h2);
   //Creating table headings
   var tr_head = document.createElement('tr');
   p = pokemons[1];

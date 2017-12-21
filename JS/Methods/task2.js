@@ -5,6 +5,10 @@ function task2(jsonObj) {
 
   var pokemons = jsonObj['pokemon'];
 
+  //Task2 heading
+  var h2 = document.createElement('h2');
+  h2.innerHTML = 'Task 2: Arranging all pokemons on the basis of their evolution: ';
+  section.appendChild(h2);
   //Loop through all pokemons
   var ol = document.createElement('ol');
   for(var i = 0; i < pokemons.length; i++) {
