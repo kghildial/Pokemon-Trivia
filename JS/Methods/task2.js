@@ -7,8 +7,12 @@ function task2(jsonObj) {
 
   //Task2 heading
   var h2 = document.createElement('h2');
+  var h4 = document.createElement('h4');
   h2.innerHTML = 'Task 2: Arranging all pokemons on the basis of their evolution: ';
+  h4.innerHTML = 'Format: *a) Pokemon 1: Base Pokemon Name (height, weight, spawn time) --> Evolution 1 Name (height, weight, spawn time) --> Evolution 2 Name (height, weight, spawn time) --> so on*';
+
   section.appendChild(h2);
+  section.appendChild(h4);
   //Loop through all pokemons
   var ol = document.createElement('ol');
   for(var i = 0; i < pokemons.length; i++) {
