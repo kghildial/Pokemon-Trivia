@@ -13,8 +13,9 @@ function task2(jsonObj) {
 
   section.appendChild(h2);
   section.appendChild(h4);
-  //Loop through all pokemons
+
   var ol = document.createElement('ol');
+  //Loop through all pokemons
   for(var i = 0; i < pokemons.length; i++) {
     // create 'li' for each element
     var li = document.createElement('li');
@@ -52,20 +53,16 @@ function task2(jsonObj) {
         //if pokemons[i].num == prev_evolution[i].num
         for(k = 0; k < pokemons.length; k++) {
           if(pokemons[k].num == pokemons[i].prev_evolution[j].num) {
-            //add (name, height, weight, spawn_time) of that evolution ot 'p'
+            //add (name, height, weight, spawn_time) of that evolution at 'p'
             p.innerHTML += pokemons[k].name + ' (' + pokemons[k].height + ', ' + pokemons[k].weight + ', ' + pokemons[k].spawn_time + ') --> ';
+            break;
           }
         }
       }
-      //add current (name, height, weight, spawn_time) to 'p'
-      if(pokemons[i].prev_evolution && pokemons[i].next_evolution) {
-        p.innerHTML += pokemons[i].name + ' (' + pokemons[i].height + ', ' + pokemons[i].weight + ', ' + pokemons[i].spawn_time + ') --> ';
-      }
-      else {
-        p.innerHTML += pokemons[i].name + ' (' + pokemons[i].height + ', ' + pokemons[i].weight + ', ' + pokemons[i].spawn_time + ')';
-      }
       //if pokemon has 'next_evolution'
       if(pokemons[i].next_evolution) {
+        //add current (name, height, weight, spawn_time) to 'p'
+        p.innerHTML += pokemons[i].name + ' (' + pokemons[i].height + ', ' + pokemons[i].weight + ', ' + pokemons[i].spawn_time + ') --> ';
         //Loop through 'next_evolution'
         for(var j = 0; j < pokemons[i].next_evolution.length; j++) {
           //if pokemons[i].num == next_evolution[i].num
@@ -77,6 +74,10 @@ function task2(jsonObj) {
             }
           }
         }
+      }
+      else {
+        //add current (name, height, weight, spawn_time) to 'p'
+        p.innerHTML += pokemons[i].name + ' (' + pokemons[i].height + ', ' + pokemons[i].weight + ', ' + pokemons[i].spawn_time + ')';
       }
     }
     li.appendChild(h3);
